@@ -1,3 +1,5 @@
+
+create database programmongFue;
 USE programmongFuel;
 
 -- create table --
