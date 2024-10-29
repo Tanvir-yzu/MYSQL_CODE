@@ -54,7 +54,6 @@ where Roll = '0001';
 
 select 10+50;
 
-select  
 
 
 
