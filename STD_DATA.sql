@@ -39,3 +39,26 @@ from Student;
 
 select Name 
 from Student;
+
+select *
+from Student 
+where Name = 'Tanvir';
+
+
+
+select Email
+from student
+where Roll = '0001';
+
+
+
+select 10+50;
+
+select  
+
+
+
+
+
+
+
