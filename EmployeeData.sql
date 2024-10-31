@@ -102,3 +102,37 @@ This query will return all employees with EmpName that includes "oph" anywhere i
 
 select * from Employee
 where  EmpName like '%oph%';
+
+select Designation from Employee;
+
+select * from Employee 
+where Designation= 'UI Developer';
+
+update Employee
+set  
+Designation = 'Data Analyst'
+where  EmpId= 39;
+
+select * from Employee 
+where Designation= 'Data Analyst';
+
+
+select sum(Salary) from Employee 
+where Designation= 'Data Analyst';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
