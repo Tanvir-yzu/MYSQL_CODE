@@ -121,7 +121,8 @@ select sum(Salary) from Employee
 where Designation= 'Data Analyst';
 
 
-
+select EmpId ,EmpName,Designation,Salary from Employee 
+where Salary >= 90000.00  and Salary <= 100000.00;
 
 
 
