@@ -69,10 +69,39 @@ INSERT INTO Library (title, author, publication_year, student_id) VALUES
 select * from Library;
 
 -- Fee --
-create table Fee(
-fee_id int primary key auto_increment,
-student_id int not null,
-amont decimal(10,2) not null,
-status enum('paid','unpaid'),
-foreign key (student_id) references Student (student_id)
+CREATE TABLE Fee (
+    fee_id INT PRIMARY KEY AUTO_INCREMENT,
+    student_id INT NOT NULL,
+    amount DECIMAL(10, 2) NOT NULL,
+    due_date DATE,
+    status ENUM('paid', 'unpaid'),
+    FOREIGN KEY (student_id) REFERENCES Student(student_id)
 );
+DROP TABLE IF EXISTS Fee;
+INSERT INTO Fee (student_id, amount, due_date, status) VALUES
+(1, 1000.00, '2024-01-10', 'paid'),
+(2, 1200.00, '2024-02-15', 'unpaid'),
+(3, 1100.00, '2024-03-05', 'paid'),
+(4, 1300.00, '2024-04-10', 'unpaid'),
+(5, 1000.00, '2024-05-15', 'paid'),
+(6, 1250.00, '2024-06-20', 'unpaid'),
+(7, 1400.00, '2024-07-25', 'paid'),
+(8, 1150.00, '2024-08-30', 'unpaid'),
+(9, 1050.00, '2024-09-15', 'paid'),
+(10, 1300.00, '2024-10-05', 'unpaid'),
+(11, 1000.00, '2024-11-10', 'paid'),
+(12, 1100.00, '2024-12-15', 'unpaid'),
+(13, 1200.00, '2025-01-10', 'paid'),
+(14, 1350.00, '2025-02-20', 'unpaid'),
+(15, 1400.00, '2025-03-15', 'paid'),
+(16, 1250.00, '2025-04-25', 'unpaid'),
+(17, 1150.00, '2025-05-30', 'paid'),
+(18, 1100.00, '2025-06-15', 'unpaid'),
+(19, 1200.00, '2025-07-10', 'paid'),
+(20, 1300.00, '2025-08-20', 'unpaid');
+
+select * from Fee;
+
+select * from Fee
+
+where status = 'paid';
